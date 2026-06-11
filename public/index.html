@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Issue Resolving System - JIIT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Navigation Header (Visible only when logged in) -->
+    <header id="user-header" class="hidden">
+        <div class="nav-container">
+            <span>Welcome, <strong id="user-name-top">User</strong></span>
+            <button id="logout-btn-top">Logout</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- 1. Portal Selection Section -->
+        <div id="portal-selection" class="card">
+            <h1>Campus Issue Resolving System</h1>
+            <p class="subtitle">Department of CSE/IT - JIIT</p>
+            <div class="selection-buttons">
+                <button id="select-student" class="btn-primary">Student Portal</button>
+                <button id="select-admin" class="btn-secondary">Admin Portal</button>
+            </div>
+        </div>
+
+        <!-- 2. Authentication Section (Login/Signup) -->
+        <div id="auth-section" class="card hidden">
+            <h2 id="auth-title">Login</h2>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="College Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            
+            <div class="auth-actions">
+                <button id="login-btn" class="btn-submit">Login</button>
+                <button id="signup-btn" class="btn-outline">Sign Up</button>
+            </div>
+
+            <div class="divider">OR</div>
+
+            <!-- Google Sign-In Button -->
+            <button id="google-btn" class="google-btn">
+                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google Icon">
+                Sign in with Google
+            </button>
+
+            <!-- Corrected Back Link ID -->
+            <a href="#" id="back-to-portal" class="back-link">← Back</a>
+        </div>
+
+        <!-- 3. Student Dashboard View -->
+        <div id="student-view" class="card hidden">
+            <h2>Your Reported Issues</h2>
+            <p id="issue-count-display">Total Issues Reported: 0</p>
+            
+            <div id="student-issues-list" class="issues-container">
+                <!-- User's specific issues will load here -->
+            </div>
+
+            <hr>
+
+            <h3>Report a New Issue</h3>
+            <form id="issue-form">
+                <input type="text" id="student-name" placeholder="Full Name" required>
+                <input type="text" id="roll-no" placeholder="Enrollment Number" required>
+                <select id="category">
+                    <option value="Infrastructure">Infrastructure</option>
+                    <option value="IT Support">IT Support</option>
+                    <option value="Hostel">Hostel</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="location" placeholder="Location (e.g., ABB-1, Room 202)" required>
+                <textarea id="description" placeholder="Describe the issue..." required></textarea>
+                <button type="submit" class="btn-submit">Submit Complaint</button>
+            </form>
+        </div>
+
+        <!-- 4. Admin Dashboard View -->
+        <div id="admin-view" class="card hidden">
+            <h2>Admin Dashboard - All Complaints</h2>
+            <div id="admin-issues-list" class="issues-container">
+                <!-- All issues for admin review will load here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase Configuration and Main Logic -->
+    <script type="module" src="firebase-config.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

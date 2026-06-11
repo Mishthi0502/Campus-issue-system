@@ -1,0 +1,79 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    max-width: 600px;
+    width: 100%;
+}
+
+header {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+#user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eef2f3;
+    padding: 8px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#user-header p { margin: 0; font-weight: 600; font-size: 0.9rem; }
+
+.logout-small {
+    background: #e74c3c !important;
+    width: auto !important;
+    padding: 6px 12px !important;
+    font-size: 0.8rem !important;
+}
+
+.hidden { display: none !important; }
+
+input, select, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.secondary { background: #7f8c8d; }
+
+.text-link {
+    background: none;
+    color: #3498db;
+    border: none;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    width: auto;
+}
+
+.issue-card, .admin-card {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+}

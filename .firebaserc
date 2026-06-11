@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "campusissuesystem"
+  },
+  "targets": {
+    "campusissuesystem": {
+      "hosting": {
+        "campus-issue-system": [
+          "campusissuesystem"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
